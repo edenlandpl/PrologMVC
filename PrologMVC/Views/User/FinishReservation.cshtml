@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Podsumowanie rezerwacji";
+}
+
+    <span style="color:#000066">
+        <h1>Podsumowanie rezerwacji</h1>
+    </span>
+        <div>
+            <hr />
+            <h4>Dziękujemy za złożenie rezerwacji na wizytę.</h4>
+    
+    <br /> <br /> <h5>Potwierdzenie wizyty dostaniesz na email, tak szybko jak to możliwe</h5><br /> <br />
+    <h2>Twoje dane rejestracji wizyty</h2><br /> <br />
+    <table id="t01" width="800">
+        <col width="200">
+        <col width="200">
+        <col width="200">
+        <col width="250">
+        <col width="200">
+        <col width="200">
+        <tr>
+            <th>Terapeuta</th>
+            <th>Data wizyty</th>
+            <th>Godzina wizyty</th>
+            <th>Twój email</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+        </tr>
+        <tr>
+            <td>@ViewBag.DaneRezerwacji[0]</td>
+            <td>@ViewBag.DaneRezerwacji[1]</td>
+            <td>@ViewBag.DaneRezerwacji[2]</td>
+            <td>@ViewBag.DaneRezerwacji[3]</td>
+            <td>@ViewBag.DaneRezerwacji[4]</td>
+            <td>@ViewBag.DaneRezerwacji[5]</td>
+        </tr>
+    </table>
+    <hr />
+</div>

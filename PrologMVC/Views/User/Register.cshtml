@@ -1,0 +1,42 @@
+﻿@model UserLogin
+@{
+    ViewData["Title"] = "Rejestracja w serwisie Prolog";
+}
+
+<h1>Rejestracja w serwisie Prolog</h1>
+
+<div class="card-body">
+    <h1>
+        Zmień swoje dane konta
+    </h1>
+    <form method="post" asp-action="RegisterForm">
+        <div class="form-group">
+            <label asp-for="LoginUser">Login</label>
+            <input asp-for="LoginUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="FirstNameUser">Imię</label>
+            <input asp-for="FirstNameUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="LastNameUser">Nazwisko</label>
+            <input asp-for="LastNameUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumberUser">Numer telefonu</label>
+            <input asp-for="PhoneNumberUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PasswordUser">Hasło</label>
+            <input type="password" asp-for="PasswordUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PasswordUser">Powtórz hasło</label>
+            <input type="password" asp-for="PasswordUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Rejestruj" />
+            @*<a asp-action="Register" class="btn btn-light">Rejestracja</a>*@
+        </div>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+﻿@model UserLogin
+
+@{
+    ViewData["Title"] = "Strona logowania";
+}
+
+
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Zaloguj się na stronę.</p>
+
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Error
+    </div>
+}
+
+
+<div class="card text-center">
+    <div class="card-header">
+        Logowanie
+    </div>
+    <div class="card-body">
+        <form method="post" asp-action="Logowanie">
+            <div class="form-group">
+                <label>Podaj nazwę użytkownika (email)</label>
+                <input asp-for="LoginUser" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label>Podaj hasło</label>
+                <input type="password" asp-for="PasswordUser" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Logowanie" />
+                <a asp-action="Register" class="btn btn-light">Rejestracja</a>
+            </div>
+        </form>
+
+    </div>

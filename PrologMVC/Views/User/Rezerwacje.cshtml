@@ -1,0 +1,246 @@
+﻿@model OstatecznaRezerwacja
+
+@{
+    ViewData["Title"] = "Rezerwacje - wolne terminy";
+}
+@{
+    var userList = ViewBag.UserString as string[];
+}
+<h1>Twój wybór</h1>
+
+<div>
+    <hr />
+    <h4>Rezerwacja</h4>
+    <table id="t01" width="800">
+        <col width="200">
+        <col width="600">
+        <tr>
+                <th>Wybrałeś terapeutę</th>
+                <th>Wybrałeś datę wizyty</th>
+            </tr>
+        <tr>
+            <td>@Model.lastnameTherapis</td>
+            <td>
+                <h5>@Model.dateReservation</h5>
+            </td>
+        </tr>
+    </table>
+    <hr />
+</div>
+
+@*1 @ViewBag.UserString[0]
+    2 @ViewBag.UserString[1]
+    3 @ViewBag.UserString[2]
+    4 @ViewBag.UserString[3]
+    5 @ViewBag.UserString[4]
+    6 @ViewBag.UserString[5]*@
+
+@*@foreach (var item in userList)
+{
+    
+}*@
+<style>
+    table {
+        width: 500;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    table#t01 tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    table#t01 th {
+        background-color: black;
+        color: white;
+    }
+</style>
+<h2>Wolne terminy z dnia @Model.dateReservation</h2>
+
+
+<table id="t01">
+    <tr>
+        <th>Godzina</th>
+        <th>Zamów wizytę</th>
+    </tr>
+    <tr>
+        <td>08:00</td>
+        <td>
+            @if (ViewBag.Hour08 != true)
+            {
+
+                if (true)
+                {
+                    Model.timeReservation = "08";
+                }
+                <form method="post" asp-action="FinishReservation">
+                    <input type="hidden" asp-for="@Model.lastnameTherapis" />
+                    <input type="hidden" asp-for="@Model.dateReservation" />
+                    <input type="hidden" asp-for="@Model.timeReservation" />
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Zamów wizytę" />
+                    </div>
+                </form>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>09:00</td>
+        <td>
+            @if (ViewBag.Hour09 != true)
+            {
+
+                if (true)
+                {
+                    Model.timeReservation = "09";
+                }
+                <form method="post" asp-action="FinishReservation">
+                    <input type="hidden" asp-for="@Model.lastnameTherapis" />
+                    <input type="hidden" asp-for="@Model.dateReservation" />
+                    <input type="hidden" asp-for="@Model.timeReservation" />
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Zamów wizytę" />
+                    </div>
+                </form>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>10:00</td>
+        <td>
+            @if (ViewBag.Hour10 != true)
+            {
+
+                if (true)
+                {
+                    Model.timeReservation = "10";
+                }
+                <form method="post" asp-action="FinishReservation">
+                    <input type="hidden" asp-for="@Model.lastnameTherapis" />
+                    <input type="hidden" asp-for="@Model.dateReservation" />
+                    <input type="hidden" asp-for="@Model.timeReservation" />
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Zamów wizytę" />
+                    </div>
+                </form>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>11:00</td>
+        <td>
+            @if (ViewBag.Hour11 != true)
+            {
+
+                if (true)
+                {
+                    Model.timeReservation = "11";
+                }
+                <form method="post" asp-action="FinishReservation">
+                    <input type="hidden" asp-for="@Model.lastnameTherapis" />
+                    <input type="hidden" asp-for="@Model.dateReservation" />
+                    <input type="hidden" asp-for="@Model.timeReservation" />
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Zamów wizytę" />
+                    </div>
+                </form>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>12:00</td>
+        <td>
+            @if (ViewBag.Hour12 != true)
+            {
+
+                if (true)
+                {
+                    Model.timeReservation = "12";
+                }
+                <form method="post" asp-action="FinishReservation">
+                    <input type="hidden" asp-for="@Model.lastnameTherapis" />
+                    <input type="hidden" asp-for="@Model.dateReservation" />
+                    <input type="hidden" asp-for="@Model.timeReservation" />
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Zamów wizytę" />
+                    </div>
+                </form>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>13:00</td>
+        <td>
+            @if (ViewBag.Hour13 != true)
+            {
+
+                if (true)
+                {
+                    Model.timeReservation = "13";
+                }
+                <form method="post" asp-action="FinishReservation">
+                    <input type="hidden" asp-for="@Model.lastnameTherapis" />
+                    <input type="hidden" asp-for="@Model.dateReservation" />
+                    <input type="hidden" asp-for="@Model.timeReservation" />
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Zamów wizytę" />
+                    </div>
+                </form>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>14:00</td>
+        <td>
+            @if (ViewBag.Hour14 != true)
+            {
+
+                if (true)
+                {
+                    Model.timeReservation = "14";
+                }
+                <form method="post" asp-action="FinishReservation">
+                    <input type="hidden" asp-for="@Model.lastnameTherapis" />
+                    <input type="hidden" asp-for="@Model.dateReservation" />
+                    <input type="hidden" asp-for="@Model.timeReservation" />
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Zamów wizytę" />
+                    </div>
+                </form>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>15:00</td>
+        <td>
+            @if (ViewBag.Hour15 != true)
+            {
+
+                if (true)
+                {
+                    Model.timeReservation = "15";
+                }
+                <form method="post" asp-action="FinishReservation">
+                    <input type="hidden" asp-for="@Model.lastnameTherapis" />
+                    <input type="hidden" asp-for="@Model.dateReservation" />
+                    <input type="hidden" asp-for="@Model.timeReservation" />
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Zamów wizytę" />
+                    </div>
+                </form>
+            }
+        </td>
+    </tr>    
+</table>

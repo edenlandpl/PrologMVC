@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Therapist>
+@{
+    ViewData["Title"] = "Wybierz terapeutę";
+}
+
+<h1>Wybierz terapeutę</h1>
+@foreach (var item in Model)
+{
+<table id="t01" width="800">
+    <col width="200">
+    <col width="600">
+    @*<tr>
+        <th>Imię i nazwisko terapeuty</th>
+        <th>Krótka notatka o terapeucie</th>
+    </tr>*@
+    <tr>
+        <td><a asp-action="ChooseData" class="btn btn-light" asp-route-lastName="@item.lastname">@item.firstname @item.lastname</a></td>
+        <td>
+            <a asp-action="ChooseData" class="btn btn-light" asp-route-lastName="@item.lastname"> @item.noteTherapist</a>
+        </td>
+    </tr>
+</table>
+
+}

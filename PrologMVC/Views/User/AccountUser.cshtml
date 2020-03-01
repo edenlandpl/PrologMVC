@@ -1,0 +1,92 @@
+﻿@using PrologMVC.Models;
+@model UserLogin
+@*, List<string>*@
+@{
+    ViewData["Title"] = "Konto użytkownika";
+}
+@*zamiana View Bag na tablicę string (foreach person)*@
+@{
+    var userList = ViewBag.UserString as string[];
+}
+@*@{
+    var userList1 = ViewBag.UserList;
+}*@
+@*@{
+        var userLogin = ViewBag.UserList[1];
+    }*@
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Witaj użytkowniku -<b> @ViewBag.UserString[2]  @ViewBag.UserString[3]</b></p>
+@*<p>
+        @ViewBag.sesionv
+    </p>*@
+
+<form method="post" asp-action="Wylogowanie">
+    @*<input type="hidden" asp-for="@Model.lastnameTherapis" />*@
+    <div class="form-group">
+        <input type="submit" class="btn btn-success" value="Wyloguj" />
+    </div>
+</form>
+
+<div class="col">
+    <h2>
+        Twoje dane:</h2>
+        <p></p>
+        
+        <h4>
+            <p>
+                Login : <b> @ViewBag.UserString[0]</b>
+</p>
+
+            <p>
+                Imię : <b> @ViewBag.UserString[2]</b>
+</p>
+            <p>
+                Nazwisko : <b>@ViewBag.UserString[3]</b>
+</p>
+            <p>
+                Numer telefonu : <b> @ViewBag.UserString[4]</b>
+</p>
+        </h4>
+</div>
+
+@*Formularz zmian*@
+<div class="card-body">
+    <h1>
+        Zmień swoje dane konta</h1>
+    <form method="post" asp-action="AccountEdit">
+        <div class="form-group">
+            <label asp-for="LoginUser">Login</label>
+            <input asp-for="LoginUser" class="form-control" value="@ViewBag.UserString[0]" />
+        </div>
+        <div class="form-group">
+            <label asp-for="FirstNameUser">Imię</label>
+            <input asp-for="FirstNameUser" class="form-control" value="@ViewBag.UserString[2]" />
+        </div>
+        <div class="form-group">
+            <label asp-for="LastNameUser">Nazwisko</label>
+            <input asp-for="LastNameUser" class="form-control" value="@ViewBag.UserString[3]" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumberUser">Numer telefonu</label>
+            <input asp-for="PhoneNumberUser" class="form-control" value="@ViewBag.UserString[4]" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PasswordUser">Hasło</label>
+            <input type="password" asp-for="PasswordUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PasswordUser">Powtórz hasło</label>
+            <input type="password" asp-for="PasswordUser" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Zmień dane" />
+            @*<a asp-action="Register" class="btn btn-light">Rejestracja</a>*@
+        </div>
+    </form>
+</div>
+
+
+
+
