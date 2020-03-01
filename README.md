@@ -21,20 +21,20 @@ Wyznaczenie grup użytkowników oraz funkcji systemu:
 
 ***Zrzuty ekranowe***
 
-![Grafika](http://edenland.pl/adi/PrologInt01.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt02.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt03.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt04.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt05.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt06.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt07.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt08.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt09.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt10.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt11.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt12.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt13.PNG)
-![Grafika](http://edenland.pl/adi/PrologInt14.PNG)
+![Grafika](http://edenland.pl/adi/PrologInt01.png)
+![Grafika](http://edenland.pl/adi/PrologInt02.png)
+![Grafika](http://edenland.pl/adi/PrologInt03.png)
+![Grafika](http://edenland.pl/adi/PrologInt04.png)
+![Grafika](http://edenland.pl/adi/PrologInt05.png)
+![Grafika](http://edenland.pl/adi/PrologInt06.png)
+![Grafika](http://edenland.pl/adi/PrologInt07.png)
+![Grafika](http://edenland.pl/adi/PrologInt08.png)
+![Grafika](http://edenland.pl/adi/PrologInt09.png)
+![Grafika](http://edenland.pl/adi/PrologInt10.png)
+![Grafika](http://edenland.pl/adi/PrologInt11.png)
+![Grafika](http://edenland.pl/adi/PrologInt12.png)
+![Grafika](http://edenland.pl/adi/PrologInt13.png)
+![Grafika](http://edenland.pl/adi/PrologInt14.png)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2019 © <a href="http://edenland.pl" target="_blank">Edenland</a>.
